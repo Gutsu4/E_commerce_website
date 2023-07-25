@@ -1,0 +1,75 @@
+<?php
+
+	session_start();
+	session_regenerate_id(true);
+	if(isset($_SESSION['login']) == false){
+		print 'ログインされていません。<br/>';
+		print '<a href = "../staff_login/sl_login.html">ログイン画面へ</a>';
+		exit();
+	}
+	
+	else{
+		print 'ログイン中：';
+		print $_SESSION['staff_name'];
+		print '<br/>';
+	}
+?>
+
+<!DOCTYPE html>
+<html>
+
+	<!--headココカラ-->
+	<head>
+		<meta charset = "UTF-8">
+		<title>商品追加実行</title>
+	</head>
+
+	<!--bodyココカラ-->
+	<body>
+		<?php
+			try{	
+				$p_code = $_POST['code'];
+				$p_name = $_POST['name'];
+				$p_price = $_POST['price'];
+				$p_gazou_old = $_POST['gazou_name_old'];
+				$p_gazou = $_POST['gazou_name'];
+
+
+				$p_name = htmlspecialchars($p_name, ENT_QUOTES, 'UTF-8');
+				$p_price = htmlspecialchars($p_price, ENT_QUOTES, 'UTF-8');
+
+				$dsn = 'mysql:dbname=shop;host=localhost;charset=utf8';
+				$user = 'root';
+				$password = '';
+				$dbh = new PDO($dsn, $user, $password);
+				$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+				$sql = 'UPDATE product_list SET name = ?, price = ?, picture = ? WHERE code = ?';
+				$stmt = $dbh -> prepare($sql);
+				$data[] = $p_name;
+				$data[] = $p_price;
+				$data[] = $p_gazou;
+				$data[] = $p_code;
+				$stmt -> execute($data);
+
+				$dbh = null;
+
+				if($p_gazou_old != $p_gazou){
+					if($p_gazou_old != ''){
+						unlink('./gazou/'.$p_gazou_old);
+					}
+				}
+
+			}
+			catch(Exception $e){
+				print '障害発生中';
+				exit();
+			}
+				
+		?>
+		修正しました。<bt/>
+		<bt/>
+		<a href = "p_list.php">戻る</a>
+
+	</body>
+</html>

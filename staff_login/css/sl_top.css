@@ -1,0 +1,66 @@
+/* sl_top.css */
+
+body {
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: #333;
+}
+
+.relogin-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6347;
+    border-radius: 3px;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.relogin-button:hover {
+    background-color: #cc4c35;
+}
+
+.relogin-button:active {
+    background-color: #99331e;
+}
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 40px 80px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 3px;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color: #0056b3;
+}
+
+.menu-button:active {
+    background-color: #003b80;
+}
+
+.login-name{
+    padding-left: 80%;
+}
