@@ -1,0 +1,51 @@
+/* テーブルスタイル */
+table {
+    width: 40%; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table td {
+    width: 30%; 
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #7e7e7e; /* ここで背景色を薄いグレーに変更 */
+    color: black; /* テキスト色も黒に変更 */
+}
+
+table td.radio-button {
+    text-align: center;
+    width: 5%;
+}
+
+form input[type="submit"] {
+    display: inline-block;
+    width: auto; /* 元の100%からautoに変更してボタンの幅を内容に合わせる */
+    padding: 10px;
+    margin: 10px; /* マージンを追加してボタン間にスペースを作る */
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #007BFF;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}

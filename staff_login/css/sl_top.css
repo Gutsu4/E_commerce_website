@@ -15,25 +15,6 @@ body {
     color: #333;
 }
 
-.relogin-button {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #ff6347;
-    border-radius: 3px;
-    text-align: center;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.relogin-button:hover {
-    background-color: #cc4c35;
-}
-
-.relogin-button:active {
-    background-color: #99331e;
-}
-
 .menu-grid {
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +42,3 @@ body {
     background-color: #003b80;
 }
 
-.login-name{
-    padding-left: 80%;
-}

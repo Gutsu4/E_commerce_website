@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="./css/sl_top.css">
         <title>ショップ管理</title>
     </head>

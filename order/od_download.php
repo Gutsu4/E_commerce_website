@@ -21,6 +21,7 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<title>注文ダウンロード</title>
 	</head>
 

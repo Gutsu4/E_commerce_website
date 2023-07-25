@@ -1,0 +1,49 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 60px;
+    color: #333;
+}
+.login-name{
+    padding-left: 80%;
+}
+
+.relogin-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6347;
+    border-radius: 3px;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.relogin-button:hover {
+    background-color: #cc4c35;
+}
+
+.relogin-button:active {
+    background-color: #99331e;
+}
+
+.topmenu{
+    display: inline-block;
+    color: #007BFF;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 3px;
+    transition: background-color 0.3s ease; /* ホバー時の背景色変化を滑らかにする */
+}
+
+.topmenu:hover{
+    color: #fff;
+    background-color: #007BFF;
+}

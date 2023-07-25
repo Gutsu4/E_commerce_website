@@ -20,6 +20,7 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<title>商品一覧</title>
 	</head>
 	<!--bodyココカラ-->
@@ -62,6 +63,6 @@
 			}
 		?>
 		<br/>
-		<a href = "../staff_login/sl_top.php">トップメニューへ</a><br/>
+		<a href = "../staff_login/sl_top.php" class='topmenu'>トップメニューへ</a><br/>
 	</body>
 </html>
