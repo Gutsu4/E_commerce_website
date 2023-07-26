@@ -9,8 +9,8 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="stylesheet" type="text/css" href="../css/add.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/style.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/add.css">
 		<title>商品追加実行</title>
 	</head>
 
@@ -40,18 +40,18 @@
 
 				$dbh = null;
 
+				print '<h2>';
 				print $p_name;
 				print 'を追加しました。<br/>';
+				print '</h2>';
 
 			}
 			catch(Exception $e){
 				print '障害発生中';
 				exit();
-			}
-				
+			}	
 		?>
-
-		<a href = "p_list.php">戻る</a>
+		<a href = "p_list.php" class="back-button">戻る</a>
 
 	</body>
 </html>

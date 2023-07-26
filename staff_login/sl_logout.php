@@ -14,8 +14,8 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="stylesheet" type="text/css" href="./css/sl_login.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/style.css">
+		<link rel="stylesheet" type="text/css" href="./staff_css/sl_login.css">
 		<title>スタッフログアウト</title>
 	</head>
 

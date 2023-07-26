@@ -8,8 +8,8 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="stylesheet" type="text/css" href="../css/list.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/style.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/list.css">
 		<title>商品一覧</title>
 	</head>
 

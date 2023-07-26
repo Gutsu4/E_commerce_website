@@ -8,8 +8,8 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="stylesheet" type="text/css" href="../css/delete.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/style.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/delete.css">
 		<title>スタッフ一覧</title>
 	</head>
 	<!--bodyココカラ-->

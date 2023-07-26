@@ -1,0 +1,23 @@
+.file-input-container {
+    position: relative;
+}
+
+.file-input-button {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 150px;
+    background-color: #595959;
+    color: white;
+    cursor: pointer;
+}
+
+#file-name {
+    margin-left: 10px;
+    line-height: 2.5;
+}
+
+#file-input {
+    display: none;
+    align-items: center;
+    text-align: center;
+}

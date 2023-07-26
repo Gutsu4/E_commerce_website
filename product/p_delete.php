@@ -1,18 +1,6 @@
 <?php
-
 	session_start();
 	session_regenerate_id(true);
-	if(isset($_SESSION['login']) == false){
-		print 'ログインされていません。<br/>';
-		print '<a href = "../staff_login/sl_login.html">ログイン画面へ</a>';
-		exit();
-	}
-	
-	else{
-		print 'ログイン中：';
-		print $_SESSION['staff_name'];
-		print '<br/>';
-	}
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +8,10 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../staff_css/style.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/delete.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/img.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/file.css">
 		<title>商品一覧</title>
 	</head>
 	<!--bodyココカラ-->
@@ -61,25 +53,17 @@
 				exit();
 			}
 		?>
-		商品削除<br/>
-		<br/>
-		商品コード<br/>
-		<?php print $p_code;?>
-		<br/>
-		商品名<br/>
-		<?php print $p_name;?><br/>
-		商品価格<br/>
-		<?php print $p_price;?><br/>
-		<?php print $disp_gazou;?>
-		<br/>
-		この商品を削除してよろしいですか？
-		<br/>
+		<h1>商品削除</h1>
 		<form method = "post" action = "p_delete_done.php">
+		<?php print '<p>商品コード : ' . $p_code . '</p>' ; ?>
+		<?php print '<p>商品名 : ' . $p_name . '</p>'; ?>	
+		<?php print '<p>商品価格 : ' . $p_price . '</p>'; ?>
+		<?php print $disp_gazou;?>
+		<p>この商品を削除してよろしいですか？</p>
 			<input type = 'hidden' name = 'code' value = "<?php print $p_code;?>">
 			<input type = 'hidden' name = 'gazou_name' value = "<?php print $p_gazou;?>">
-			<input type = 'button' onclick = 'history.back()' value = "戻る">
 			<input type = 'submit' value = "OK">
-			
+			<input type = 'button' onclick = 'history.back()' value = "戻る">
 		</form>
 	</body>
 </html>

@@ -1,18 +1,6 @@
 <?php
-
 	session_start();
 	session_regenerate_id(true);
-	if(isset($_SESSION['login']) == false){
-		print 'ログインされていません。<br/>';
-		print '<a href = "../staff_login/sl_login.html">ログイン画面へ</a>';
-		exit();
-	}
-	
-	else{
-		print 'ログイン中：';
-		print $_SESSION['staff_name'];
-		print '<br/>';
-	}
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +9,10 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../staff_css/style.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/delete.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/img.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/file.css">
 		<title>商品追加実行</title>
 	</head>
 
@@ -55,9 +47,8 @@
 			}
 				
 		?>
-		削除しました。<bt/>
-		<bt/>
-		<a href = "p_list.php">戻る</a>
+		<h2>削除しました。</h2>
+		<a href = "p_list.php" class="back-button">戻る</a>
 
 	</body>
 </html>

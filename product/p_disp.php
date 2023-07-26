@@ -8,9 +8,9 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="stylesheet" type="text/css" href="../css/disp.css">
-		<link rel="stylesheet" type="text/css" href="../css/img.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/style.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/disp.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/img.css">
 		<title>スタッフ一覧</title>
 	</head>
 	<!--bodyココカラ-->
@@ -61,9 +61,11 @@
 			</p>
 			<p>価格 : 
 				<?php print $p_price;?>
+			</p>
+			<p>
 				<?php print $disp_gazou;?>
 			</p>
 		</div>
-		<input type = 'button' onclick = 'history.back()' value = "戻る">		
+		<input type = 'button' onclick = 'history.back()' value = "戻る" class="back-button">		
 	</body>
 </html>

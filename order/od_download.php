@@ -17,22 +17,10 @@
 	<!--bodyココカラ-->
 	<body>
 		<?php
-                if(isset($_SESSION['login']) == false) {
-                    echo '<h2>ログインされていません。</h2><br/>';
-                    echo '<a href="../staff_login/index.html" class="relogin-button">ログイン画面へ</a>';
-                    exit();
-                } else {
-                    echo '<span class=login-name>ログイン名 : ' . $_SESSION['staff_name'] . '</span>';
-                    echo '<br/>';                    
-                }
-        ?>
-
-		<?php
 			require_once('../common/common.php');
 		?>
 
-		<h2>ダウンロードしたい注文日を選んでください。</h2>
-		<br/>
+		<h1>注文日を選んでください。</h1>
 		<form method = "post" action = "od_download_done.php">
 		<div class="form-group">
 			<?php pulldown_year(); ?>
