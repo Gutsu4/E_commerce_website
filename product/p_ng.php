@@ -1,18 +1,6 @@
 <?php
-
 	session_start();
 	session_regenerate_id(true);
-	if(isset($_SESSION['login']) == false){
-		print 'ログインされていません。<br/>';
-		print '<a href = "../staff_login/sl_login.html">ログイン画面へ</a>';
-		exit();
-	}
-	
-	else{
-		print 'ログイン中：';
-		print $_SESSION['staff_name'];
-		print '<br/>';
-	}
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +9,13 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<title>テスト</title>
 	</head>
 
 	<!--bodyココカラ-->
 	<body>
-	商品が選択されていません。<br/>
-	<a href = "p_list.php">戻る</a>
-
+	<h2>商品が選択されていません。</h2><br/>
+	<a href = "p_list.php" class=back-button>戻る</a>
 	</body>
 </html>

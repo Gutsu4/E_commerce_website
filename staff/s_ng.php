@@ -9,24 +9,13 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<title>テスト</title>
 	</head>
 
 	<!--bodyココカラ-->
 	<body>
-		<div class="header">
-			<?php
-				if(isset($_SESSION['login']) == false) {
-					echo '<h2>ログインされていません。</h2><br/>';
-					echo '<a href="../staff_login/index.html" class="relogin-button">ログイン画面へ</a>';
-					exit();
-				} else {
-					echo '<span class=login-name>ログイン名 : ' . $_SESSION['staff_name'] . '</span>';
-					echo '<br/>';                    
-				}
-			?>
-		</div>
-		スタッフが選択されていません。<br/>
-		<a href = "s_list.php">戻る</a>
+		<h2>スタッフが選択されていません。</h2><br/>
+		<a href = "s_list.php" class=back-button>トップメニューへ</a>
 	</body>
 </html>

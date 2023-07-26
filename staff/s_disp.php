@@ -8,6 +8,8 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/disp.css">
 		<title>スタッフ一覧</title>
 	</head>
 	<!--bodyココカラ-->
@@ -38,15 +40,13 @@
 				exit();
 			}
 		?>
-		スタッフ情報参照<br/>
-		<br/>
-		スタッフコード<br/>
-		<?php print $staff_code;?>
-		<br/>
-		スタッフ名<br/>
-		<?php print $staff_name;?>
-		<br/>
-			<input type = 'button' onclick = 'history.back()' value = "戻る">		
-		</form>
+		
+		<h1>スタッフ情報参照</h1>
+
+		<?php
+			print '<div class="staff-info">スタッフコード<br/>' . $staff_code . '<br/><br/>スタッフ名<br/>' . $staff_name . '</div>';
+		?>
+		<input type = 'button' onclick = 'history.back()' value = "戻る">		
+		
 	</body>
 </html>

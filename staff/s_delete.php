@@ -8,10 +8,25 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/delete.css">
 		<title>スタッフ一覧</title>
 	</head>
 	<!--bodyココカラ-->
 	<body>
+		<div class="header">
+            <?php
+                if(isset($_SESSION['login']) == false) {
+                    echo '<h2>ログインされていません。</h2><br/>';
+                    echo '<a href="../staff_login/index.html" class="relogin-button">ログイン画面へ</a>';
+                    exit();
+                } else {
+                    echo '<span class=login-name>ログイン名 : ' . $_SESSION['staff_name'] . '</span>';
+                    echo '<br/>';                    
+                }
+            ?>
+			<h1>スタッフ削除</h1>
+        </div>
 		<?php
 			try{
 				$staff_code = $_GET['staffcode'];
@@ -38,21 +53,14 @@
 				exit();
 			}
 		?>
-		スタッフ削除<br/>
-		<br/>
-		スタッフコード<br/>
-		
-		<?php print $staff_code;?>
-		<br/>
-		スタッフ名<br/>
-		<?php print $staff_name;?><br/>
-		このスタッフを削除してよろしいですか？<br>
-		<br/>
+
 		<form method = "post" action = "s_delete_done.php">
+		<?php
+			print '<div class="staff-info">スタッフコード<br/>' . $staff_code . '<br/><br/>スタッフ名<br/>' . $staff_name . '</div><br/>';
+		?>
 			<input type = 'hidden' name = 'code' value = "<?php print $staff_code;?>">
-			<input type = 'button' onclick = 'history.back()' value = "戻る">
 			<input type = 'submit' value = "OK">
-			
+			<input type = 'button' onclick = 'history.back()' value = "戻る">
 		</form>
 	</body>
 </html>

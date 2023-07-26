@@ -8,6 +8,8 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/add.css">
 		<title>スタッフ追加チェック</title>
 	</head>
 
@@ -21,37 +23,37 @@
 			$staff_name = htmlspecialchars($staff_name, ENT_QUOTES, 'UTF-8');
 			$staff_pass = htmlspecialchars($staff_pass, ENT_QUOTES, 'UTF-8');		
 			$staff_pass2 = htmlspecialchars($staff_pass2, ENT_QUOTES, 'UTF-8');	
-
-			if($staff_name == ''){
-				print 'スタッフ名が入力されていません<br/>';
-			}
-			else{
-				print 'スタッフ名';
-				print $staff_name;
-				print '<br/>';
-			}
-
-			if($staff_pass == ''){
-				print 'パスワードが入力されていません<br/>';
-			}
-			
-			if($staff_pass != $staff_pass2){
-				print 'パスワードが一致しません<br/>';
-			}
+					
 
 			if($staff_name == '' || $staff_pass == '' || $staff_pass != $staff_pass2){
 				print '<form>';
+				if($staff_name == ''){
+					print '<p>スタッフ名が入力されていません</p><br/>';
+				}
+	
+				if($staff_pass == ''){
+					print '<p>パスワードが入力されていません</p><br/>';
+				}
+				
+				if($staff_pass != $staff_pass2){
+					print '<p>パスワードが一致しません</p><br/>';
+				}
 				print '<input type = "button" onclick = " history.back()" value = "戻る">';
 				print '</form>';
 			}
 			else{
+
 				$staff_pass = md5($staff_pass);
 				print '<form method = "post" action = "s_add_done.php">';
 				print '<input type = "hidden" name = "name" value = "'.$staff_name.'">';
 				print '<input type = "hidden" name = "pass" value = "'.$staff_pass.'">';
-				print '<br/>';
-				print '<input type = "button" onclick = "history.back()" value = "戻る">';
+
+				print '<p>追加スタッフ名 : ';
+				print $staff_name;
+				print '</p>';
+	
 				print '<input type = "submit" value = "OK">';
+				print '<input type = "button" onclick = "history.back()" value = "戻る">';
 				print '</form>';
 			}
 		?>

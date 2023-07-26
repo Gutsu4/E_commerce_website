@@ -123,9 +123,6 @@
 				exit();
 			}
 
-			/*CSVに書き込む文字列を確認　※確認後コメントアウト忘れずに※*/
-			//print nl2br($csv);
-
 			$str = './../order_output/' .$data[0] . $data[1] . $data[2] . '.csv';
 			$file = fopen($str,'w');
 			$csv = mb_convert_encoding($csv,'SJIS','UTF-8');

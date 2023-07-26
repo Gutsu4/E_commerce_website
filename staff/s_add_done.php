@@ -9,11 +9,25 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/add.css">
 		<title>スタッフ追加実行</title>
 	</head>
 
 	<!--bodyココカラ-->
 	<body>
+		<div class="header">
+            <?php
+                if(isset($_SESSION['login']) == false) {
+                    echo '<h2>ログインされていません。</h2><br/>';
+                    echo '<a href="../staff_login/index.html" class="relogin-button">ログイン画面へ</a>';
+                    exit();
+                } else {
+                    echo '<span class=login-name>ログイン名 : ' . $_SESSION['staff_name'] . '</span>';         
+                }
+            ?>
+        </div>
+
 		<?php
 			try{
 				$staff_name = $_POST['name'];
@@ -36,8 +50,8 @@
 
 				$dbh = null;
 
-				print $staff_name;
-				print 'さんを追加しました。<br/>';
+				print '<div class="message">' . $staff_name . 'さんを追加しました。</div><br/>';
+
 
 			}
 			catch(Exception $e){
@@ -47,7 +61,7 @@
 				
 		?>
 
-		<a href = "s_list.php">戻る</a>
+		<a href = "s_list.php" class="back-button">戻る</a>
 
 	</body>
 </html>

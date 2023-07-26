@@ -13,7 +13,7 @@ h1 {
     padding-left: 80%;
 }
 
-.relogin-button {
+.relogin-button ,.back-button{
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
@@ -24,11 +24,11 @@ h1 {
     transition: background-color 0.2s ease-in-out;
 }
 
-.relogin-button:hover {
+.relogin-button:hover,.back-button:hover {
     background-color: #cc4c35;
 }
 
-.relogin-button:active {
+.relogin-button:active .back-button:active{
     background-color: #99331e;
 }
 

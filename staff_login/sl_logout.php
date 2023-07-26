@@ -15,13 +15,14 @@
 	<head>
 		<meta charset = "UTF-8">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="./css/sl_login.css">
 		<title>スタッフログアウト</title>
 	</head>
 
 	<!--bodyココカラ-->
 	<body>
-		ログアウトしました。<br/>
+		<h2>ログアウトしました。</h2><br/>
 		<br/>
-		<a href = "../staff_login/index.html">ログイン画面へ</a>
+		<a href = "../staff_login/index.html" class=relogin-button>ログイン画面へ</a>
 	</body>
 </html>
