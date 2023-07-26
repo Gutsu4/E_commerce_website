@@ -9,7 +9,7 @@
 	<!--headココカラ-->
 	<head>
 		<meta charset = "UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../staff_css/style.css">
 		<link rel="stylesheet" type="text/css" href="./css/od_download.css">
 		<title>注文ダウンロード</title>
 	</head>
@@ -39,5 +39,6 @@
 
         <input type="submit" value="ダウンロードへ" >
 		</form>
+		<a href = "../staff_login/sl_top.php" class='topmenu'>トップメニューへ </a>
 	</body>
 </html>

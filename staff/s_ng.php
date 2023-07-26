@@ -16,6 +16,6 @@
 	<!--bodyココカラ-->
 	<body>
 		<h2>スタッフが選択されていません。</h2><br/>
-		<a href = "s_list.php" class=back-button>トップメニューへ</a>
+		<a href = "s_list.php" class=back-button>戻る</a>
 	</body>
 </html>

@@ -80,4 +80,4 @@
 			}
 		?>
 		<br/>
-		<a href = "../staff_login/sl_top.php" class='topmenu'>トップメニューへ</
+		<a href = "../staff_login/sl_top.php" class='topmenu'>トップメニューへ </a>
